@@ -7,7 +7,9 @@
     "linter": "prettier --check .",
     "linter:fix": "prettier --write .",
     "test":"jest",
-    "test:watch":"jest --watch "
+    "test:watch":"jest --watch ",
+    "service:up": "docker compose up -d",
+    "service:down": "docker compose down"
   },
   "author": "naiana e romario",
   "license": "ISC",
