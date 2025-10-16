@@ -1,4 +1,4 @@
-require("dotenv").config();
+.
 console.log(process.env);
 const {query} = require("./infra/database");
 
