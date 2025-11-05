@@ -1,14 +1,14 @@
 require("dotenv").config();
-const { port } = require("pg/lib/defaults");
+const http = require("node:http");
 const livroRepository = require("./infra/repository/livro");
 
-cont serve = http.creatServer(function (red, res) {
+const server = http.createServer(function (red, res) {
   //res.writeHead(200, {"content-type" "text/plain"})
   res.end("Ok vem vindo");
 });
 
-cont por = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
-ServiceWorkerRegistration.listen(port, function () {
+server.listen(port, function () {
    console.log("Inicializando servidor HTTP na porta " + port);
 });
