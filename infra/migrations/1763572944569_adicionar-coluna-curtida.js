@@ -1,17 +1,15 @@
 /**
  * @type {import('node-pg-migrate').ColumnDefinitions | undefined}
  */
-exports.shorthands = undefined;
+export const shorthands = undefined;
 
 /**
  * @param pgm {import('node-pg-migrate').MigrationBuilder}
  * @param run {() => void | undefined}
  * @returns {Promise<void> | void}
  */
-exports.up = (pgm) => {
-  pgm.sql (`
-    ALTER TABLE livro ADD COLUMN top_livro BOOLEAN DEFAULT false;
-    `)
+export const up = (pgm) => {pgm.sql(`
+    ALTER TABLE livro ADD COLUMN curtidas integer DEFAULT 0`)
 };
 
 /**
@@ -19,8 +17,4 @@ exports.up = (pgm) => {
  * @param run {() => void | undefined}
  * @returns {Promise<void> | void}
  */
-exports.down = (pgm) => {
-   pgm.sql (`
-    ALTER TABLE livro DROP COLUMN top_livro;
-    `)
-};
+export const down = (pgm) => {};
