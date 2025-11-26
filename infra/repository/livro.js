@@ -28,7 +28,7 @@ module.exports = {consultarTodos, consultaTops,consultaMaisAdquiridos};
 module.exports = {consultarTodos, consultaTops};
 
 async function consultacurtidas() {
-  const sql = `SELECT * FROM livro ORDER BY curtida DESC LIMIT 5`;
+  const sql = `SELECT * FROM livro ORDER BY curtidas DESC LIMIT 5`;
 
   const resultados = await query(sql)
 
